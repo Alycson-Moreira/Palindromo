@@ -2,6 +2,9 @@ function verificaPalindromo2(string) {
     if (!string) {
         alert("string inválida");
         iniciar();
+    }else if(string === " "){
+        alert("Palavra digitada VAZIA, digite outra palavra...");
+        iniciar();
     }else{
 
         alert(`palavra a verificar é: ${string}`);
@@ -12,16 +15,16 @@ function verificaPalindromo2(string) {
                 console.log(false);
                 ePalindromo = false;
             } else{
-                ePalindromo = true;
-            }
+                    ePalindromo = true;
+                  }
         }
 
-    if (ePalindromo) {
-        alert((`a Palavra ${string} é um palindromo : ${string.split("").reverse().join("")}`));
-    }else{
-        alert((`a Palavra ${string} não é um palindromo : ${string.split("").reverse().join("")}`));
-    }    
-}
+        if (ePalindromo) {
+            alert((`a Palavra:" ${string}" é um palindromo : ${string.split("").reverse().join("")}`));
+        }else{
+                alert((`a Palavra:" ${string}" não é um palindromo : ${string.split("").reverse().join("")}`));
+             }    
+    }
 
     
     //return alert(`a Palavra ${string} é um palindromo = ${string.split("").reverse()}`);
